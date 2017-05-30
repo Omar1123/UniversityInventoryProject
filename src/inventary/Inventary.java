@@ -39,7 +39,15 @@ public class Inventary {
     }
     
     public void start() {
-        
+        //newArticle("1","9012","Jabon para la ropa magia blanca","15","90","Joyeria","4");
+        //newOrder("1","1","Omar","Guatemala","87392312","328923J","1","90","1200","2017/05/29");
+        //newDeliveries("1","1","INICIADO");
+        //newDevolution("1","1","1");
+        //allOrders();
+        //allOrdersPerDay("2017/05/29");
+        //allDeliveriesByStatus("INICIADO");
+        //allSustitutions();
+        //generalReportOfArticles();
     }
     
     public void newArticle(String id, String code, String description, String cost, String price, String type, String amount) {
@@ -67,7 +75,9 @@ public class Inventary {
             
             orders.write(id + "," + orderNumber + "," + clientName + "," + direction + "," + phone + "," + nit + "," + articleId 
                 + "," + amount + "," + totalPrice + "," + dateDelivery + "," + getDate() + "\r\n");                                                            
-            orders.close();                                  
+            orders.close(); 
+            
+            System.out.println("Guardado correctamente");
         } catch (Exception ex) {
           //Captura un posible error le imprime en pantalla 
             System.out.println(ex.getMessage());
@@ -83,7 +93,9 @@ public class Inventary {
             BufferedWriter deliveries =new BufferedWriter(new OutputStreamWriter(new FileOutputStream(DELIVERIES, true), "utf-8"));            
             
             deliveries.write(id + "," + orderId + "," + status + "," + getDate() + "\r\n");                                                            
-            deliveries.close();                                  
+            deliveries.close(); 
+            
+            System.out.println("Guardado correctamente");
         } catch (Exception ex) {
           //Captura un posible error le imprime en pantalla 
             System.out.println(ex.getMessage());
@@ -97,7 +109,9 @@ public class Inventary {
             BufferedWriter devolution =new BufferedWriter(new OutputStreamWriter(new FileOutputStream(DEVOLUTION, true), "utf-8"));            
             
             devolution.write(id + "," + idOldArticle + "," + idNewArticle + "," + getDate() + "\r\n");                                                            
-            devolution.close();                                  
+            devolution.close();               
+            
+            System.out.println("Guardado correctamente");
         } catch (Exception ex) {
           //Captura un posible error le imprime en pantalla 
             System.out.println(ex.getMessage());
