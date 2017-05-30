@@ -49,7 +49,9 @@ public class Inventary {
             BufferedWriter article =new BufferedWriter(new OutputStreamWriter(new FileOutputStream(ARTICLES, true), "utf-8"));            
             
             article.write(id + "," + code + "," + description + "," + cost + "," + price + "," + type + "," + amount + "," + getDate() + "\r\n");                                                
-            article.close();                                  
+            article.close();   
+            
+            System.out.println("Guardado correctamente");
         } catch (Exception ex) {
           //Captura un posible error le imprime en pantalla 
             System.out.println(ex.getMessage());
@@ -142,7 +144,7 @@ public class Inventary {
                 
                 while((lines = buffer.readLine())!= null) {
                     if(lines.indexOf(",")!= -1){
-                        if (lines.split(",")[9].equalsIgnoreCase(date)) {                        
+                        if (lines.split(",")[10].equalsIgnoreCase(date)) {                        
                             System.out.println("Id: " + lines.split(",")[0]);
                             System.out.println("Order: " + lines.split(",")[1]);
                             System.out.println("Client: " + lines.split(",")[2]);
@@ -169,7 +171,7 @@ public class Inventary {
     
     public void allDeliveriesByStatus(String status) {
         try {            
-            if(ORDERS.exists()){
+            if(DELIVERIES.exists()){
                 
                 BufferedReader buffer = new BufferedReader(new FileReader(DELIVERIES));                
                 String lines;
@@ -197,13 +199,55 @@ public class Inventary {
     
     public void allSustitutions() {
         
+        try {            
+            if(DEVOLUTION.exists()){
+                
+                BufferedReader buffer = new BufferedReader(new FileReader(DEVOLUTION));                
+                String lines;
+                                
+                while((lines = buffer.readLine())!= null) {    
+                    System.out.println("Id: " + lines.split(",")[0]);
+                    System.out.println("Old Article: " + lines.split(",")[1]);
+                    System.out.println("New Article: " + lines.split(",")[2]);
+                }
+                
+                buffer.close();
+              }else{
+                System.out.println("Fichero No Existe");
+              }
+        } catch (Exception ex) {
+            /*Captura un posible error y le imprime en pantalla*/ 
+             System.out.println(ex.getMessage());
+        }
     }
     
-    public void generalReport() {
-        
-    }
-    
-    
+    public void generalReportOfArticles() {
+        try {            
+            if(ARTICLES.exists()){
+                
+                BufferedReader buffer = new BufferedReader(new FileReader(ARTICLES));                
+                String lines;
+                                
+                while((lines = buffer.readLine())!= null) {    
+                    
+                    System.out.println("Id: " + lines.split(",")[0]);
+                    System.out.println("Code: " + lines.split(",")[1]);
+                    System.out.println("Description: " + lines.split(",")[2]);
+                    System.out.println("Cost: " + lines.split(",")[3]);
+                    System.out.println("Price: " + lines.split(",")[4]);
+                    System.out.println("Type: " + lines.split(",")[5]);
+                    System.out.println("Amount: " + lines.split(",")[6]);
+                }
+                
+                buffer.close();
+              }else{
+                System.out.println("Fichero No Existe");
+              }
+        } catch (Exception ex) {
+            /*Captura un posible error y le imprime en pantalla*/ 
+             System.out.println(ex.getMessage());
+        }
+    }       
     
     public String getDate() {
         
