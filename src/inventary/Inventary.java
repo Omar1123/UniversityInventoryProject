@@ -167,8 +167,32 @@ public class Inventary {
         }
     }
     
-    public void allOrdersByStatus(String status) {
-        
+    public void allDeliveriesByStatus(String status) {
+        try {            
+            if(ORDERS.exists()){
+                
+                BufferedReader buffer = new BufferedReader(new FileReader(DELIVERIES));                
+                String lines;
+                
+                while((lines = buffer.readLine())!= null) {
+                    if(lines.indexOf(",")!= -1){
+                        if (lines.split(",")[2].equalsIgnoreCase(status)) {                        
+                                                       
+                            System.out.println("Id: " + lines.split(",")[0]);
+                            System.out.println("Order: " + lines.split(",")[1]);
+                            System.out.println("Status: " + lines.split(",")[2]);                           
+                        } 
+                    }
+                }                                               
+                
+                buffer.close();
+              }else{
+                System.out.println("Fichero No Existe");
+              }
+        } catch (Exception ex) {
+            /*Captura un posible error y le imprime en pantalla*/ 
+             System.out.println(ex.getMessage());
+        }
     }
     
     public void allSustitutions() {
