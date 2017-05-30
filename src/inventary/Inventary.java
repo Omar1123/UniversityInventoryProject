@@ -21,7 +21,7 @@ public class Inventary {
 
     private File ARTICLES = new File("/Users/jake/NetBeansProjects/Inventary/src/inventary/ART.txt");
     private File ORDERS = new File("/Users/jake/NetBeansProjects/Inventary/src/inventary/ORD.txt");
-    private File DELIVERIES = new File("");
+    private File DELIVERIES = new File("/Users/jake/NetBeansProjects/Inventary/src/inventary/DEL.txt");
     private File DEVOLUTION = new File("");
     
     /**
@@ -62,8 +62,7 @@ public class Inventary {
             BufferedWriter orders =new BufferedWriter(new OutputStreamWriter(new FileOutputStream(ORDERS, true), "utf-8"));            
             
             orders.write(id + "," + orderNumber + "," + clientName + "," + direction + "," + phone + "," + nit + "," + articleId 
-                + "," + amount + "," + totalPrice + "," + dateDelivery + "," + getDate() + "\r\n");                                                
-            
+                + "," + amount + "," + totalPrice + "," + dateDelivery + "," + getDate() + "\r\n");                                                            
             orders.close();                                  
         } catch (Exception ex) {
           //Captura un posible error le imprime en pantalla 
@@ -71,6 +70,20 @@ public class Inventary {
         }          
     }       
         
+    public void newDeliveries(String id, String orderId, String status) {
+              
+        try {
+                   
+            BufferedWriter deliveries =new BufferedWriter(new OutputStreamWriter(new FileOutputStream(DELIVERIES, true), "utf-8"));            
+            
+            deliveries.write(id + "," + orderId + "," + status + "," + getDate() + "\r\n");                                                            
+            deliveries.close();                                  
+        } catch (Exception ex) {
+          //Captura un posible error le imprime en pantalla 
+            System.out.println(ex.getMessage());
+        }          
+    }       
+    
     public String getDate() {
         
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
