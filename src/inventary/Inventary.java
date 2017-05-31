@@ -25,6 +25,7 @@ public class Inventary {
     private File ORDERS = new File("/Users/jake/NetBeansProjects/Inventary/src/inventary/ORD.txt");
     private File DELIVERIES = new File("/Users/jake/NetBeansProjects/Inventary/src/inventary/DEL.txt");
     private File DEVOLUTION = new File("/Users/jake/NetBeansProjects/Inventary/src/inventary/DEV.txt");
+    private File LOGIN = new File("/Users/jake/NetBeansProjects/Inventary/src/inventary/LGI.txt");
     
     /**
      * @param args the command line arguments
@@ -261,7 +262,22 @@ public class Inventary {
             /*Captura un posible error y le imprime en pantalla*/ 
              System.out.println(ex.getMessage());
         }
-    }       
+    } 
+    
+    public void administratorLogin(String username, String password) {
+        try {
+                   
+            BufferedWriter login =new BufferedWriter(new OutputStreamWriter(new FileOutputStream(LOGIN, true), "utf-8"));            
+            
+            login.write(username + "," + password + "\r\n");                                                            
+            orders.close(); 
+            
+            System.out.println("Guardado correctamente");
+        } catch (Exception ex) {
+          //Captura un posible error le imprime en pantalla 
+            System.out.println(ex.getMessage());
+        } 
+    }
     
     public String getDate() {
         
