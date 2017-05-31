@@ -270,13 +270,48 @@ public class Inventary {
             BufferedWriter login =new BufferedWriter(new OutputStreamWriter(new FileOutputStream(LOGIN, true), "utf-8"));            
             
             login.write(username + "," + password + "\r\n");                                                            
-            orders.close(); 
+            login.close(); 
             
             System.out.println("Guardado correctamente");
         } catch (Exception ex) {
           //Captura un posible error le imprime en pantalla 
             System.out.println(ex.getMessage());
         } 
+    }
+    
+    public boolean isAdministrator(String username, String password) {
+        
+        boolean login = false;
+        
+        try {            
+            if(LOGIN.exists()){
+                
+                BufferedReader buffer = new BufferedReader(new FileReader(LOGIN));                
+                String lines;
+                                
+                while((lines = buffer.readLine())!= null) {    
+                    
+                    if(lines.split(",")[0] == username) {
+                        if(lines.split(",")[1] == password) {
+                            login = true;
+                        } else {
+                            login = false;
+                        }
+                    } else {
+                        login = false;
+                    }                  
+                }
+                
+                buffer.close();
+              }else{
+                System.out.println("Fichero No Existe");
+              }
+        } catch (Exception ex) {
+            /*Captura un posible error y le imprime en pantalla*/ 
+             System.out.println(ex.getMessage());
+        }
+        
+        return login;
     }
     
     public String getDate() {
