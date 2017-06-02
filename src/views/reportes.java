@@ -5,11 +5,6 @@
  */
 package views;
 
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
-import javax.swing.JLayeredPane;
-import javax.swing.JPanel;
-
 /**
  *
  * @author Alvarados
@@ -21,16 +16,6 @@ public class reportes extends javax.swing.JFrame {
      */
     public reportes() {
         initComponents();
-        setLocationRelativeTo(null);
-//        setResizable(false);
-        setTitle(" Moda GT, S.A - Proyecto Final");
-        setIconImage(new ImageIcon(this.getClass().getResource("/images/icon.png")).getImage());
-        ((JPanel)getContentPane()).setOpaque(false);
-        ImageIcon uno = new ImageIcon(this.getClass().getResource("/images/fondo.jpg"));
-        JLabel fondo = new JLabel();
-        fondo.setIcon(uno);
-        getLayeredPane().add(fondo, JLayeredPane.FRAME_CONTENT_LAYER);
-        fondo.setBounds(0, 0, uno.getIconWidth(),uno.getIconHeight());
     }
 
     /**

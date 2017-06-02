@@ -58,7 +58,7 @@ public class principal extends javax.swing.JFrame {
 
         btnInventario.setBackground(new java.awt.Color(255, 255, 255));
         btnInventario.setForeground(new java.awt.Color(255, 255, 255));
-        btnInventario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/inventario.jpg"))); // NOI18N
+        btnInventario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/inventario.png"))); // NOI18N
         btnInventario.setBorder(null);
         btnInventario.setBorderPainted(false);
         btnInventario.setContentAreaFilled(false);
@@ -74,7 +74,7 @@ public class principal extends javax.swing.JFrame {
         jLabel1.setText("INVENTARIO");
 
         btnPedidos.setForeground(new java.awt.Color(255, 255, 255));
-        btnPedidos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pedido.jpg"))); // NOI18N
+        btnPedidos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pedidos.png"))); // NOI18N
         btnPedidos.setContentAreaFilled(false);
         btnPedidos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnPedidos.addActionListener(new java.awt.event.ActionListener() {
@@ -87,7 +87,7 @@ public class principal extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("PEDIDOS");
 
-        btnEntregas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/entrega.jpg"))); // NOI18N
+        btnEntregas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/entregas.png"))); // NOI18N
         btnEntregas.setContentAreaFilled(false);
         btnEntregas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEntregas.addActionListener(new java.awt.event.ActionListener() {
@@ -100,7 +100,7 @@ public class principal extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("ENTREGAS");
 
-        btnSustituciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/devolucion.jpg"))); // NOI18N
+        btnSustituciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sustituciones.png"))); // NOI18N
         btnSustituciones.setContentAreaFilled(false);
         btnSustituciones.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSustituciones.addActionListener(new java.awt.event.ActionListener() {
@@ -113,7 +113,7 @@ public class principal extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("SUSTITUCIONES");
 
-        btnReportes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/reporte.jpg"))); // NOI18N
+        btnReportes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/reportes.png"))); // NOI18N
         btnReportes.setContentAreaFilled(false);
         btnReportes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnReportes.addActionListener(new java.awt.event.ActionListener() {
@@ -168,12 +168,10 @@ public class principal extends javax.swing.JFrame {
                 .addGap(98, 98, 98)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnReportes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(btnSustituciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnEntregas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnPedidos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnInventario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addComponent(btnSustituciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnEntregas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnPedidos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnInventario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
