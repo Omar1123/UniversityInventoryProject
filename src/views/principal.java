@@ -7,6 +7,7 @@ package views;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JLayer;
 import javax.swing.JLayeredPane;
 import javax.swing.JPanel;
 
@@ -21,17 +22,17 @@ public class principal extends javax.swing.JFrame {
      */
     public principal() {
         initComponents();
+        //initComponents();
         setLocationRelativeTo(null);
 //        setResizable(false);
         setTitle(" Moda GT, S.A - Proyecto Final");
-        setIconImage(new ImageIcon(this.getClass().getResource("/images/icon.png")).getImage());
-        ((JPanel)getContentPane()).setOpaque(false);
-        ImageIcon uno = new ImageIcon(this.getClass().getResource("/images/fondo.jpg"));
-        JLabel fondo = new JLabel();
-        fondo.setIcon(uno);
-        getLayeredPane().add(fondo, JLayeredPane.FRAME_CONTENT_LAYER);
-        fondo.setBounds(0, 0, uno.getIconWidth(),uno.getIconHeight());
-        
+       // setIconImage(new ImageIconon(this.getClass().getResource("/images/icon.png")).getImage());
+//        ((JPanelel)getContentPane()).setOpaque(false);
+  //      ImageIcon uno = new ImageIcon(this.getClass().getResource("/images/fondo.jpg"));
+    //    JLabel fondo = new JLabelabel();
+        //fondo.setIcon(uno);
+      //  getLayeredPane().add(fondo, JLayeredPanedPane.FRAME_CONTENT_LAYER);
+        //fondo.setBounds(0, 0, uno.getIconWidth(),uno.getIconHeight());
     }
 
     /**
@@ -43,71 +44,21 @@ public class principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton5 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-
-        jButton5.setText("jButton5");
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/devolucion.jpg"))); // NOI18N
-
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/entrega.jpg"))); // NOI18N
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/reporte.jpg"))); // NOI18N
-
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pedido.jpg"))); // NOI18N
-
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/inventario.jpg"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(97, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(134, 134, 134))
+            .addGap(0, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(147, 147, 147)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4)
-                    .addComponent(jButton1))
-                .addGap(28, 28, 28)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(21, Short.MAX_VALUE))
+            .addGap(0, 300, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -145,11 +96,5 @@ public class principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     // End of variables declaration//GEN-END:variables
 }
